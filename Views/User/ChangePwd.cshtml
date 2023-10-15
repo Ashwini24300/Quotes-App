@@ -1,0 +1,56 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>CHANGE PROFILE</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <center>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Quotes Application</a>
+                    <a class="btn btn-primary" style="background-color: coral" href="/Quotes/AddQuotes">Add Quote</a>
+                    <a class="btn btn-primary" style="background-color:coral" href="/User/Profile">PROFILE</a>
+                    <a class="btn btn-primary" style="background-color:coral" href="/User/SignOut/">LOGOUT</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <h1 class="alert-info" style="width:75%;height:60px">PASSWORD DETAILS</h1>
+            <form action="/User/ChangePwd" method="post">
+                <table class="table table-hover" style="width: 75%">
+                    <tr>
+                        <td>ENTER OLD PASSWORD :</td>
+                        <td><input type="password" name="old_passwd" /></td>
+                    </tr>
+
+                    <tr>
+                        <td>ENTER NEW PASSWORD :</td>
+                        <td><input type="text" name="new_passwd" /></td>
+                    </tr>
+
+                    <tr>
+                        <td>CONFIRM NEW PASSWORD :</td>
+                        <td><input type="text" name="confirm_passwd" /></td>
+                    </tr>
+
+                    <tr>
+                        <td><input class="btn btn-info" type="submit" value="CHANGE PASSWORD"/></td>
+                    </tr>
+                </table>
+
+                <div class="alert alert-danger" value="@Model"></div>
+            </form>
+        </div>
+
+    </center>
+</body>
+</html>
+

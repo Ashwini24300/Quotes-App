@@ -1,0 +1,62 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>AllQuotesDashboard</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <center>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Quotes Application</a>
+                    <a class="navbar-brand" href="">About</a>
+                    <a class="btn btn-primary" style="background-color:lightcoral" href="/Quotes/AddQuotes">Add Quote</a>
+                    <a class="btn btn-primary" style="background-color:coral" href="/User/Profile">PROFILE</a>
+                    <a class="btn btn-primary" style="background-color:lightcoral" href="/User/SignOut">LOGOUT</a>
+                </div>
+            </div>
+        </div>
+
+        <form action="/Quotes/EditQuotes" method="post">
+            <div class="table-responsive">
+                <h1 class="alert-info" style="width:50%;height:60px">EDIT QUOTES DASHBOARD</h1>
+                <table class="table-bordered" style="width: 50%">
+
+                    @* We need to pass all the values of the quotes even to some dont to
+                       be displayed on the view-page. *@
+                    <tr>
+                        <td><input type="hidden" name="Id" value="@Model.Id" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="hidden" name="user_id" value="@Model.user_id"/></td>
+                    </tr>
+
+                    @* Fields displaying on the view-page. *@
+                    <tr>
+                        <td>QUOTE :</td>
+                        <td><input type="text" name="text" value="@Model.text" /></td>
+                    </tr>
+                    <tr>
+
+                        <td>AUTHOR :</td>
+                        <td><input type="text" name="author" value="@Model.author" /></td>
+                    </tr>
+
+                    @* Submit the form *@
+                    <tr>
+                        <td colspan="2"><input type="submit" class="btn btn-info" value="UPDATE" /> </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+
+    </center>
+</body>
+</html>
+

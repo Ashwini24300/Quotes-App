@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="df0714db338a4f679f5748116e406de9" Name="Diagram1">
+        <EntityTypeShape EntityType="QuotesApplicationDatabaseModel.Quote" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuotesApplicationDatabaseModel.User" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="QuotesApplicationDatabaseModel.FK__Quotes__user_id__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="QuotesApplicationDatabaseModel.FavoriteQuote" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

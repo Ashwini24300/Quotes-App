@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QuotesApplicationDatabaseModelStoreContainer" CdmEntityContainer="QuotesApplicationDatabaseEntities">
+    <EntitySetMapping Name="Quotes">
+      <EntityTypeMapping TypeName="QuotesApplicationDatabaseModel.Quote">
+        <MappingFragment StoreEntitySet="Quotes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="QuotesApplicationDatabaseModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FavoriteQuote" TypeName="QuotesApplicationDatabaseModel.FavoriteQuote" StoreEntitySet="FavoriteQuote">
+      <EndProperty Name="Quotes">
+        <ScalarProperty Name="Id" ColumnName="quote_id" />
+      </EndProperty>
+      <EndProperty Name="Users">
+        <ScalarProperty Name="Id" ColumnName="user_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
